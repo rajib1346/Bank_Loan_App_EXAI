@@ -8,12 +8,12 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model
-model_path = "C:/Users/acer/Bank Loan/Models/model.pkl"
+model_path = "Models/model.pkl"
 with open(model_path, 'rb') as model_file:
     model = pickle.load(model_file)
 
 # Load the training data for LIME explainer background
-train_data_path = "C:/Users/acer/Bank Loan/Models/train.csv"  # Adjust the path accordingly
+train_data_path = "Models/train.csv"  # Adjust the path accordingly
 train_data = pd.read_csv(train_data_path)
 
 # LIME explainer setup
